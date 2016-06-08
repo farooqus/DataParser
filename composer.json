@@ -1,0 +1,17 @@
+{
+    "name": "Farooq/app",
+    "description": "Data parse to JSON format",
+    "require-dev": {},
+    "authors": [
+        {
+            "name": "Farooq Vighio",
+            "email": "farooq@vighio.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ParseData\\Code\\": "src/ParseData/Code/"
+        }
+    }
+}
