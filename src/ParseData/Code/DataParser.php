@@ -6,7 +6,7 @@ namespace ParseData\Code;
  * GetData class 
  * To get, select and process data source.
  */
-class GetData {
+class DataParser {
 
     public function dataParser() {
         $sourceUrlArray = $this->getSourceUrl();
@@ -23,11 +23,11 @@ class GetData {
 
             switch ($source['classTitle']) {
                 case 'SourceOne':
-                    $datasource = new SourceOne();
+                    $datasource = new SourceOneParser();
                     break;
 
                 case 'SourceTwo':
-                    $datasource = new SourceTwo();
+                    $datasource = new SourceTwoParser();
                     break;
             }
 

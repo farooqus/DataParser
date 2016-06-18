@@ -2,19 +2,7 @@
 
 namespace ParseData\Code;
 
-/**
- * SourceOne class implements IDataSource
- */
-class SourceOne implements IDataSource {
-
-    public function parseData($data) {
-        $ProcessDataServices = new ProcessDataServices();
-        $jsonArray = $ProcessDataServices->getDataStream($data);
-        $processJsonArray = $this->processSource($jsonArray, $data['title']);
-        $jsonFormat = json_encode($processJsonArray, JSON_PRETTY_PRINT);
-
-        return $jsonFormat;
-    }
+class SourceOneParser extends ProcessDataService implements IDataSourceParser {
 
     public function processSource($data, $title) {
         $iterator = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($data));

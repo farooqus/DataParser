@@ -2,19 +2,7 @@
 
 namespace ParseData\Code;
 
-/**
- * SourceTwo class implements IDataSource
- */
-class SourceTwo implements IDataSource {
-
-    public function parseData($data) {
-        $ProcessDataServices = new ProcessDataServices();
-        $jsonArray = $ProcessDataServices->getDataStream($data);
-        $processJsonArray = $this->processSource($jsonArray, $data['title']);
-        $jsonFormat = json_encode($processJsonArray, JSON_PRETTY_PRINT);
-
-        return $jsonFormat;
-    }
+class SourceTwoParser  extends ProcessDataService implements IDataSourceParser {
 
     public function processSource($data, $title) {
         $dataArray['provider'] = $title;

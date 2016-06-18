@@ -10,12 +10,12 @@ class ProcessData {
 
     private $dataSource;
 
-    public function __construct(IDataSource $source) {
+    public function __construct(IDataSourceParser $source) {
         $this->dataSource = $source;
     }
 
     public function processSource($sourceUrl) {
-        return $this->dataSource->parseData($sourceUrl);
+        return $this->dataSource->parseDataSource($sourceUrl);
     }
 
 }

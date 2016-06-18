@@ -3,12 +3,12 @@
 namespace ParseData\Code;
 
 /**
- * IDataSource interface.
+ * IDataSourceParser interface.
  * To be implement by all data source(s) 
  */
-interface IDataSource {
+interface IDataSourceParser {
 
-    public function parseData($data);
+    public function parseDataSource($data);
 
     public function processSource($data, $title);
 }
