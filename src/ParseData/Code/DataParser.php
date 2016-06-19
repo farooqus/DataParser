@@ -8,7 +8,7 @@ namespace ParseData\Code;
  */
 class DataParser {
 
-    public function dataParser() {
+    public function ParseData() {
         $sourceUrlArray = $this->getSourceUrl();
         $sourceType = $this->getCompanyId($sourceUrlArray);
 

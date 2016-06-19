@@ -2,7 +2,7 @@
 
 namespace ParseData\Code;
 
-class SourceOneParser extends ProcessDataService implements IDataSourceParser {
+class SourceOneParser extends AbstractDataParser {
 
     public function processSource($data, $title) {
         $iterator = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($data));

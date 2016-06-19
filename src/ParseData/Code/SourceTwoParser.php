@@ -2,7 +2,7 @@
 
 namespace ParseData\Code;
 
-class SourceTwoParser  extends ProcessDataService implements IDataSourceParser {
+class SourceTwoParser extends AbstractDataParser {
 
     public function processSource($data, $title) {
         $dataArray['provider'] = $title;
