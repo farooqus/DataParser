@@ -8,6 +8,8 @@ namespace ParseData\Code;
  */
 interface IDataSourceParser {
 
+    public function getDataStream($data);
+    
     public function parseDataSource($data);
 
     public function processSource($data, $title);
