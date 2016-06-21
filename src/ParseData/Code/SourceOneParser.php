@@ -7,7 +7,6 @@ class SourceOneParser extends AbstractDataParser {
     public function processSource($data, $title) {
         $iterator = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($data));
         $dataArray['provider'] = $title;
-        ;
         foreach ($iterator as $key => $value) {
             $dataArrayVal;
             if (is_int($key) == false) {
